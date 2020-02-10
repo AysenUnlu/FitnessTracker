@@ -1,0 +1,288 @@
+<!--<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Populate Exercise</title>
+    <style>
+      input {
+        display: block;
+        height: 36px;
+        width: 200px;
+        font-size: 24px;
+      }
+      textarea {
+        width: 200px;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/submit" method="post">
+    <h1>Hi User!</h1>
+    <h2>Enter a Note!</h2>
+      <input type="text" name="title" placeholder="Title">
+      <textarea type="text" name="body">Write Note Here</textarea>
+
+      <input type="submit">
+      <a href="/notes">See your notes!</a>
+      <a href="/user">See your profile!</a>
+      <a href="/populateduser">See your profile, populated with notes!</a>
+    </form>
+  </body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Fitness Tracker</title>
+
+    <!-- Bootstrap Core CSS -->
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <script src="https://kit.fontawesome.com/02f6453d68.js" crossorigin="anonymous"></script>
+     <script src="https://kit.fontawesome.com/70fe2499f8.js" crossorigin="anonymous"></script>
+    
+    
+    <link href="https://fonts.googleapis.com/css?family=Pacifico:400,700" rel="stylesheet" type="text/css">
+
+    <!-- Theme CSS -->
+      <link rel="stylesheet" href="/assets/css/style.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+</head>
+	<body>
+        
+        <div id = "page-container">
+            <div class = "content">
+
+             <div class="background">
+                <div class = "content">
+                   <section class="cover">
+                     <nav class="navbar navbar-expand-lg navbar-light bg-light"> 
+        
+                      <div class="navbar-nav logo" ><a href = "/">Fitness Tracker</a></div>
+                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                              <span class="fas fa-running"></span>
+                     </button>
+                     <div class="collapse navbar-collapse d-flex flex-row-reverse" id="navbarNav">
+            
+                       
+                       <a href = "/users/signup"><i class="fas fa-user  navIcons" ></i></a>
+                       <a href = "/"><i class="fas fa-running navIcons"></i></a>
+
+                     
+                    </div>
+        
+                   </nav>
+  
+      <!--//////////////////////////CONTENT BEGIN//////////////////////////-->
+                       <div class="row">
+                         <div class="col-sm-12 offset-md-3">
+                            <!-- Example single danger button -->
+                            <div class="dropdown mt-2" style="z-index:1">
+                                <button class="btn btn-danger dropdown-toggle" type="button" data-toggle="dropdown">Workout Plans
+                                <span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                  <div class="dropdown-divider"></div>
+                                  <li><button class="btn" id="addP">Add Workout plan</button></li>
+                                </ul>
+                            </div>
+
+                                <div class="card" style="width: 50rem;height:35rem;background-color:turquoise">
+                                  <div card="card-header" style="width: 50rem;background-color:darksalmon">
+                                    <img class="card-img-top" src="/assets/img/sport.jpg" alt="Card image cap">
+                                  </div>
+                                 <div class="card-body">
+                                    <h5><b>Workout Plan:</b><span id="pname"></span></h5>
+                                    <p><b>Description:</b><span id="pdescription"></p>
+                                     <h5><b>Exercises:</b><button class="btn-sm btn-danger ml-2"id="addEx">Add Exercises</button></h5>
+                                     <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                                      <table class="table table-striped " id="table">
+                                          <thead>
+                                            <tr>
+                                              <th scope="col">#</th>
+                                              <th scope="col">Name</th>
+                                              <th scope="col">Muscle Groups</th>
+                                              <th scope="col">Sets</th>
+                                              <th scope="col">Weight(lb)</th>
+                                              <th scope="col">Reps</th>
+                                              <th scope="col">Total Repetition</th>
+                                              <th scope="col">Total Weight</th>
+                                              <th scope="col">Completed</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody class="text-center" id="tableBody">
+                                           
+                                           
+                                            
+                                          </tbody>
+                                        </table>
+                                      </div>  
+                                    
+                                  </div>
+                                </div>
+
+                             
+                         </div>
+                         <div class="col-sm-6">
+                            
+                         </div>
+                       </div>  
+
+      <!--////////////////MODAL BEGIN///////////////-->
+      <!------MODAL FOR WORKOUT PLAN-->                    
+        <!--Modal: Login with Avatar Form-->
+    <div class="modal fade" id="modalPlanInput" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+       <div class="modal-dialog cascading-modal modal-avatar modal-sm" role="document">
+         <!--Content-->
+        <div class="modal-content">
+         <!--Header-->
+         <div class="modal-header">
+            <img src="/assets/img/sport.jpg" alt="avatar" class="rounded-circle img-responsive mr-0">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+             
+        </div>
+         <!--Body-->
+        <div class="modal-body text-center mb-1">
+
+            <form id="PlanForm">
+                <div class="form-group">
+                  <label for="PlanName">Workout Plan Name: </label>
+                  <input type="text" class="form-control" id="PlanName" >
+                </div>
+                <div class="form-group">
+                    <label for="PlanDesc">Plan Description:</label>
+                    <textarea class="form-control" id="PlanDesc" rows="3"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-info mb-2" id="psubmit">Submit</button>
+
+            </form>
+
+        </div>
+      </div>
+  <!--/.Content-->
+     </div>
+ </div>
+   <!-----------MODAL FOR EXERCISE----------->
+   <div class="modal fade bd-example-modal-lg" id="exerciseModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+       <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+              <div class="modal-header">
+
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>  
+              </div>
+              <div class="modal-body mb-1">
+
+                  <form id="ExerciseForm">
+                      <div class="form-group">
+                        <label for="ExerciseName">Exercise Name: </label>
+                        <input type="text" class="form-control" id="ExerciseName" >
+                      </div>
+                      <div class="form-group">
+                          <label for="MuscleGroup">Muscle Group: </label>
+                          <select class="form-control" id="muscle">
+                              <option>Chest</option>
+                              <option>Biceps</option>
+                              <option>Triceps</option>
+                              <option>Back</option>
+                              <option>Shoulder</option>
+                              <option>Legs</option>
+                              <option>Abdominal</option>
+                              <option>Combined</option>
+
+                          </select>
+                      </div>
+                      <div class="form-group">
+                          <label for="sets">Sets: </label>
+                          <input type="text" class="form-control" id="sets" >
+                      </div>
+                      <div class="form-group">
+                          <label for="weight">Weight: </label>
+                          <input type="text" class="form-control" id="weight" >
+                      </div>
+                      <div class="form-group">
+                          <label for="reps">Reps: </label>
+                          <input type="text" class="form-control" id="reps" >
+                      </div>
+                      
+      
+                      <button type="submit" class="btn btn-success mb-2" id="esubmit">Add</button>
+      
+                  </form>
+      
+              </div>
+              
+         </div>
+      </div>
+</div>
+
+
+
+      <!--//////////////////////////CONTENT END//////////////////////////-->
+      </section>
+ 
+    </div>
+
+</div>
+
+                    <!--INPUT NAVBAR HERE -->
+
+</div>
+        
+	
+   
+    <footer class="footer">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="icons">
+                    <a href=""><i
+                            class="fab fa-facebook fa-2x"></i></a>
+                    <a href=""><i class="fab fa-instagram fa-2x"></i></i></a>
+                </div>
+
+            </div>
+            <div class="col-sm-4">
+
+                <h1 class="bottom_text">Fitness Tracker</h1>
+            </div>
+            <div class="col-sm-4">
+                <p class="address">Healthy Body, Healthy Mind</p>
+            </div>
+        </div>
+        <div class="row rights">
+            <div class="col-sm-12">
+                <p class=rights>© Fitness Tracker. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    </div>
+   
+       
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+    
+    <script src="/assets/js/plan.js"> //Functionality for Checkout... Needs to be after Jquery</script>
+    
+    </div>
+</body>
+</html>
+
