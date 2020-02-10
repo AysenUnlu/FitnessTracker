@@ -48,7 +48,7 @@
    - When user has an account he has to sign in 
 
      ![Sign in](public/assets/img/SignIn.png)
-     
+
     - If the sign in is successfull, he will be directed to his workout page which lists all his workouts in the drop down menu and shows details about his last workout
 
      ![Workout Menu](public/assets/img/WorkOut.png)
