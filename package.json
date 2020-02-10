@@ -1,11 +1,9 @@
 {
-  "name": "FitnessTracker",
+  "name": "fitnesstracker",
   "version": "3.3.7+1",
-  "homepage": "https://sleepy-springs-57038.herokuapp.com/",
-  "author": "Omar Patel",
-  "license": {
-    "type": "MIT"
-  },
+  "homepage": "https://morning-wildwood-65251.herokuapp.com/",
+  "author": "Aysen Unlu",
+  "license":"MIT",
   "scripts": {
     "start": "node ./bin/www",
     "test": "mocha",
@@ -28,7 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/OSP123/TravelSecure-Mongo.git"
+    "url": "https://github.com/AysenUnlu/FitnessTracker"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
