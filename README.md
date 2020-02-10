@@ -49,12 +49,10 @@
 
      ![Sign in](public/assets/img/SignIn.png)
      
-
     - If the sign in is successfull, he will be directed to his workout page which lists all his workouts in the drop down menu and shows details about his last workout
 
      ![Workout Menu](public/assets/img/WorkOut.png)
     
-
     - He can add workout plans from the dropdown menu
 
      ![Add Workout Plans](public/assets/img/AddPlan.png)
