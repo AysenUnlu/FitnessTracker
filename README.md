@@ -49,23 +49,23 @@
 
      ![Sign in](public/assets/img/SignIn.png)
 
-    - If the sign in is successfull, he will be directed to his workout page which lists all his workouts in the drop down menu and shows details about his last workout
+  - If the sign in is successfull, he will be directed to his workout page which lists all his workouts in the drop down menu and shows details about his last workout
 
      ![Workout Menu](public/assets/img/WorkOut.png)
     
-    - He can add workout plans from the dropdown menu
+  - He can add workout plans from the dropdown menu
 
      ![Add Workout Plans](public/assets/img/AddPlan.png)
 
-    - He can add multiple exercises to the new or previous workout plans. Exercise name, the muscle group it targets, how many pounds of weight is used, sets and reps are specified. And it's shown in the table which also scrolls of too many exercises are entered.
+  - He can add multiple exercises to the new or previous workout plans. Exercise name, the muscle group it targets, how many pounds of weight is used, sets and reps are specified. And it's shown in the table which also scrolls of too many exercises are entered.
 
      ![Add Exercises](public/assets/img/AddExercises.png)
 
-    - Along with other info about exercises, total reps and weights, if it's completed or not are also listed.
+  - Along with other info about exercises, total reps and weights, if it's completed or not are also listed.
 
      ![Show Exercises](public/assets/img/ShowExercises.png)
 
-    - User can click running man icon on the navigation menu to sign out and man figure to sign in or signup.
+  - User can click running man icon on the navigation menu to sign out and man figure to sign in or signup.
     
 
 
