@@ -108,7 +108,7 @@ function savePlan(name,description) {
       }).then(function(result) {   
           console.log(result);
         $(".dropdown-menu").prepend($("<li><button class='btn' id="+result._id+">"+result+"</button></li>"));  
-        //window.location.replace("/");
+         window.location.replace("/workout");
         // If there's an error, log the error
       }).catch(function(err) {
         console.log(err);
