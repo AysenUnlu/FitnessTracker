@@ -3,7 +3,7 @@
 
 ## About: ##
 
-* For this assignment, we created a workout tracker. This assignment requires us to create Mongo database with a Mongoose schema and handle routes with Express. When the user loads the page, they can create a new workout, or continue with their last workout or explore their previous workouts. They can add exercises to a previous workout plan or a new workout plan. They can mark the exercises completed after they finish them. User needs to signup or signin to use the program. 
+* For this project, we created a workout tracker. This project requires us to create Mongo database with a Mongoose schema and handle routes with Express. When the user loads the page, they can create a new workout, or continue with their last workout or explore their previous workouts. They can add exercises to a previous workout plan or a new workout plan. They can mark the exercises completed after they finish them. User needs to signup or signin to use the program. 
 
 ## Installation: ##
 
