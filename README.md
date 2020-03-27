@@ -7,9 +7,9 @@
 
 ## Installation: ##
 
-  * The application is deployed using Heroku: 
+  * The application is deployed using Heroku.
 
-  * Running aplication can be reached at 
+  * Running aplication can be reached at [https://morning-wildwood-65251.herokuapp.com/](https://morning-wildwood-65251.herokuapp.com/) 
 
   # Setup for Local Machine
 
@@ -37,7 +37,9 @@
 
 ## Usage: ##
 
-   - When the user visits ......., he's welcomed with a sign up and sign in page
+   ![Fitness Tracker](public/assets/img/FitnessTracker.gif)
+
+   - When the user visits https://morning-wildwood-65251.herokuapp.com/, he's welcomed with a sign up and sign in page
 
      ![Welcome Page](public/assets/img/WelcomePage.png)
      
